@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Privata</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+        .message {
+            color: red;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Inserisci un nome</h1>
+    <input type="text" id="inputField" placeholder="Scrivi qui...">
+    <button onclick="checkInput()">Invio</button>
+
+    <div id="message" class="hidden message"></div>
+
+    <script>
+        function checkInput() {
+            const input = document.getElementById('inputField').value.toLowerCase();
+            const messageDiv = document.getElementById('message');
+            let message = '';
+
+            if (input === 'botusanu') {
+                message = 'ricchione';
+            } else if (input === 'zubair') {
+                message = 'Deve esplodere';
+            } else if (input === 'sorcio') {
+                message = 'molestatrice';
+            } else if (input = 'roblox') {
+                message = 'Gay de merda' ;
+            } else {
+                message = 'Parola non riconosciuta';
+            }
+
+            messageDiv.textContent = message;
+            messageDiv.classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
